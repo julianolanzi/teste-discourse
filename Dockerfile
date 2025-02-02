@@ -1,4 +1,5 @@
-FROM discourse/base:2.0.20240118
+# Usa a imagem oficial do Discourse
+FROM discourse/discourse:latest
 
 # Define o diretório de trabalho
 WORKDIR /app
@@ -14,5 +15,5 @@ RUN apt-get update && \
 # Expõe a porta usada pelo Discourse
 EXPOSE 80
 
-# Comando para iniciar o Discourse
+# Comando para iniciar o Discourse com as customizações
 CMD ["bash", "-c", "bundle exec rails server -b 0.0.0.0 -p 80"]
