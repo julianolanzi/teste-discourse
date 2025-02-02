@@ -1,5 +1,5 @@
-# Usa a imagem oficial do Discourse
-FROM discourse/discourse:latest
+# Usa a imagem oficial base do Discourse
+FROM discourse/base:latest
 
 # Define o diretório de trabalho
 WORKDIR /app
